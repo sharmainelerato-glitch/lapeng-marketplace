@@ -1,0 +1,39 @@
+# LAPENG hackathon MVP: single instance, persistent SQLite + uploads.
+# Render Starter + persistent disk is PAID. Check pricing before deploying.
+services:
+  - type: web
+    name: lapeng-demo
+    runtime: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 1 --proxy-headers
+    healthCheckPath: /health
+    disk:
+      name: lapeng-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.10
+      - key: LAPENG_DB
+        value: /var/data/lapeng.sqlite3
+      - key: LAPENG_MEDIA_DIR
+        value: /var/data/uploads
+      - key: LAPENG_DEMO_DATA
+        value: '0'
+      - key: PAYPAL_MODE
+        value: sandbox
+      - key: APP_SECRET
+        generateValue: true
+      - key: APP_BASE_URL
+        sync: false
+      - key: PAYPAL_CLIENT_ID
+        sync: false
+      - key: PAYPAL_CLIENT_SECRET
+        sync: false
+      - key: AI_BASE_URL
+        value: https://api.groq.com/openai/v1
+      - key: AI_MODEL
+        value: openai/gpt-oss-120b
+      - key: AI_API_KEY
+        sync: false
