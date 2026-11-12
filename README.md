@@ -1,4 +1,40 @@
-# LAPENG — Human-centred Agentic Commerce
+﻿# LAPENG — Local Roots, Global Opportunities
+
+### A human-centred, AI-assisted marketplace for products, services and professional opportunities.
+
+**Find what you need. Discover who's able to help. Grow together.**
+
+[**Explore Live Marketplace**](https://lapeng-free-demo.onrender.com/) · [**View Source Code**](https://github.com/sharmainelerato-glitch/lapeng-marketplace)
+
+---
+
+## Why LAPENG?
+
+Access to skilled professionals, reliable local services and economic opportunities should not depend on who you know or where you live.
+
+LAPENG connects buyers, independent businesses, artisans and freelancers in one marketplace, combining everyday commerce with AI-assisted opportunity discovery.
+
+## What You Can Do
+
+- **Shop products:** Discover goods from independent sellers and local businesses.
+- **Book services:** Find professionals for repairs, beauty, home services and more.
+- **Hire talent:** Connect with freelancers and digital professionals.
+- **Manage both roles:** Switch between Buyer and Provider workspaces using one account.
+- **Discover opportunities:** Use LAPENG AI to explore suitable providers, resources and potential collaborations.
+- **Manage projects:** Request quotations, communicate and coordinate service delivery.
+- **Pay securely in the demo:** Explore the PayPal Sandbox integration.
+- **Build trust:** Use provider profiles, reviews and reporting features.
+
+## Hackathon Demo
+
+**Live application:** https://lapeng-free-demo.onrender.com/
+
+**Technology:** Python, FastAPI, JavaScript, SQLite, Render, Groq-compatible AI and PayPal Sandbox.
+
+**Demo limitations:** Hosted on Render Free with temporary storage. Demo accounts and uploaded data may reset. Payments are Sandbox-only; the application is not intended for real commercial transactions.
+
+---
+# LAPENG â€” Human-centred Agentic Commerce
 
 **Find what you need. Discover who can help. Grow together.**
 
@@ -52,9 +88,9 @@ The app uses an OpenAI-compatible `/chat/completions` protocol. LLM output provi
 - Buyer/Provider unified account; signup/login; role-specific dashboards; provider creation
 - Local and remote search; service listings; customer requests; provider quotes; buyer approval
 - Request-bound collaboration chat; private messages; project events
-- Opportunity Assembly — category/skill relevance, location/remote constraints, stock/capacity constraints, cost and budget; optional AI explanations
-- Guardian — report submission, buyer/provider isolation, cautious message warning checks, reviews gated by completed payments
-- PayPal Orders v2 sandbox — OAuth, create order, hosted buyer approval, capture, amount/currency verification, duplicate-capture guard, status retrieval
+- Opportunity Assembly â€” category/skill relevance, location/remote constraints, stock/capacity constraints, cost and budget; optional AI explanations
+- Guardian â€” report submission, buyer/provider isolation, cautious message warning checks, reviews gated by completed payments
+- PayPal Orders v2 sandbox â€” OAuth, create order, hosted buyer approval, capture, amount/currency verification, duplicate-capture guard, status retrieval
 - Responsive layouts and keyboard-friendly controls; original SVG browser favicon
 
 ## Critical production gaps (deliberately disclosed)
@@ -77,7 +113,7 @@ See `docs/SUBMISSION_CHECKLIST.md`, `docs/DEVPOST_DESCRIPTION.md`, `docs/DEMO_SC
 
 ## License
 
-MIT — see `LICENSE`. LAPENG design and code in this ZIP are original for this prototype. Avoid copying screenshots or branded logos from reference mockups into a public project without clearing rights. No synthetic professional headshots are embedded in this build.
+MIT â€” see `LICENSE`. LAPENG design and code in this ZIP are original for this prototype. Avoid copying screenshots or branded logos from reference mockups into a public project without clearing rights. No synthetic professional headshots are embedded in this build.
 
 ## Security hardening (revision 0.9.1)
 
@@ -90,3 +126,4 @@ This revision adds same-origin mutation checks, a 64-KiB JSON request limit, bro
 Run `./VERIFY_WINDOWS.ps1` on PowerShell or `uv run python -m pytest -q` from the project root after setting up dependencies. For manual checks, use three separate test accounts (buyer, provider, outsider) and verify a private quote is hidden from the outsider, logout revokes the token, and payment always requires PayPal Sandbox approval.
 
 **Messaging privacy:** early quotations are confidential. The shared project conversation opens for the buyer and **accepted** provider; pre-acceptance quote notes are available only to the buyer and the submitting provider. Multi-provider/private pre-sale messaging, video calls and notifications are not included in this MVP.
+
