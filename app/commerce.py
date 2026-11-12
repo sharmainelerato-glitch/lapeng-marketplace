@@ -126,10 +126,10 @@ def register(app,conn,current,paypal_api,throttle):
         with conn() as db:
             query='''SELECT l.id,l.provider_id,l.title,l.description,l.kind,l.price,l.stock,
                             l.variants_json,l.packages_json,l.catalog_category,l.currency,
-                            p.name provider_name,p.city,p.country,
+                            p.name provider_name,p.city,p.country,p.owner_id,
                             (SELECT filename FROM portfolio_images im WHERE im.listing_id=l.id ORDER BY im.id DESC LIMIT 1) photo
                      FROM listings l JOIN providers p ON p.id=l.provider_id
-                     WHERE p.owner_id IS NOT NULL'''
+                     WHERE 1=1'''
             args=[]
             if q:
                 if re.fullmatch(r'LPG-L-[0-9]{1,10}',q.strip().upper()):
@@ -137,7 +137,7 @@ def register(app,conn,current,paypal_api,throttle):
                 else:
                     query+=' AND (l.title LIKE ? OR l.description LIKE ? OR p.name LIKE ? OR l.catalog_category LIKE ?)';args=['%'+q+'%']*4
             records=many(db,query+' ORDER BY l.id DESC LIMIT ?',(*args,limit))
-            return [{**{k:r[k] for k in ('id','provider_id','title','description','kind','price','stock','catalog_category','currency','provider_name','city','country')},'public_id':f'LPG-L-{r["id"]:06d}','photo_url':'/uploads/'+r['photo'] if r['photo'] else None,'variants':json.loads(r['variants_json'] or '[]'),'packages':json.loads(r['packages_json'] or '[]')} for r in records]
+            return [{**{k:r[k] for k in ('id','provider_id','title','description','kind','price','stock','catalog_category','currency','provider_name','city','country')},'public_id':f'LPG-L-{r["id"]:06d}','demo_only':r['owner_id'] is None,'photo_url':'/uploads/'+r['photo'] if r['photo'] else None,'variants':json.loads(r['variants_json'] or '[]'),'packages':json.loads(r['packages_json'] or '[]')} for r in records]
 
     @router.get('/cart')
     def get_cart(u=Depends(current)):
