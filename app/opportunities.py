@@ -97,7 +97,7 @@ def recommendations(db, task, req):
     data=[dict(r) for r in db.execute('''SELECT l.id,l.title,l.description,l.price,l.currency,l.kind,l.catalog_category,
       l.stock,l.variants_json,l.packages_json,p.id provider_id,p.name provider_name,p.city,p.country,p.remote,
       p.latitude,p.longitude,p.service_radius_km,p.skills,p.owner_id
-      FROM listings l JOIN providers p ON p.id=l.provider_id WHERE p.owner_id IS NOT NULL''')]
+      FROM listings l JOIN providers p ON p.id=l.provider_id WHERE (p.owner_id IS NOT NULL OR EXISTS (SELECT 1 FROM demo_catalogue_entries d WHERE d.provider_id=p.id))''')]
     tk=terms(task)
     intent=requested_intent(task)
     if intent == 'web_development':
