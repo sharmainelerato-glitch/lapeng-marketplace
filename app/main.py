@@ -880,3 +880,7 @@ _register_opportunities(app,conn,current,throttle)
 from app.business_setup import register as _register_business_setup
 _register_business_setup(app,conn,current)
 
+
+# Service provider commission estimates (read-only, no PayPal seller transfers).
+from app.provider_payments import register as _register_provider_payments
+_register_provider_payments(app,conn,current)
