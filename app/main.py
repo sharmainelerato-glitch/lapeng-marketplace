@@ -884,3 +884,7 @@ _register_business_setup(app,conn,current)
 # Service provider commission estimates (read-only, no PayPal seller transfers).
 from app.provider_payments import register as _register_provider_payments
 _register_provider_payments(app,conn,current)
+
+# Provider wallet preview (not funded; transfers disabled)
+from app.provider_wallet import register as _register_provider_wallet
+_register_provider_wallet(app,conn,current)
