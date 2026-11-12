@@ -1,4 +1,4 @@
-﻿# LAPENG — Local Roots, Global Opportunities
+# LAPENG — Local Roots, Global Opportunities
 
 ### A human-centred, AI-assisted marketplace for products, services and professional opportunities.
 
@@ -127,3 +127,92 @@ Run `./VERIFY_WINDOWS.ps1` on PowerShell or `uv run python -m pytest -q` from th
 
 **Messaging privacy:** early quotations are confidential. The shared project conversation opens for the buyer and **accepted** provider; pre-acceptance quote notes are available only to the buyer and the submitting provider. Multi-provider/private pre-sale messaging, video calls and notifications are not included in this MVP.
 
+---
+
+## Service Payments, Provider Earnings & LAPENG Wallet
+
+LAPENG supports a broad range of products and professional services,
+including tutoring, carpentry, repairs, beauty, web development,
+freelance work and other legitimate business activities.
+
+### Service Payments
+
+The service-payment workflow allows buyers to make PayPal Sandbox
+payments for eligible, accepted service proposals.
+
+The backend tracks completed payment captures, associates payments
+with the relevant service proposal and provider, and calculates
+estimated earnings.
+
+### LAPENG's 5% Commission
+
+LAPENG uses a proposed 5% marketplace commission model.
+
+Example: A customer pays $100 USD for a service.
+
+- Customer payment: $100.00 USD
+- Estimated LAPENG commission (5%): $5.00 USD
+- Estimated provider earnings: $95.00 USD
+
+These estimates exclude PayPal processing fees, taxes, refunds
+and other applicable adjustments.
+
+The commission is currently calculated for accounting visibility;
+it is not automatically collected as a PayPal partner fee.
+
+### LAPENG Wallet
+
+Providers have an in-app LAPENG Wallet preview within their
+Provider Workspace.
+
+It provides:
+
+- Provider-specific service earnings information
+- Gross payment amounts
+- Estimated 5% platform commission
+- Estimated net provider earnings before processing fees
+- Currency-separated accounting
+- Pending settlement information
+- Clear wallet and payout status
+
+### Current Sandbox Limitations
+
+The wallet is currently a financial-transparency preview.
+
+PayPal Sandbox payments do not deposit funds into provider wallets.
+No real funds are held, transferred or made available for withdrawal.
+
+Available-to-withdraw balances remain zero until an approved
+payment and settlement integration is implemented.
+
+### Planned Production Payment Flow
+
+The intended future workflow is:
+
+1. Buyer purchases a product or pays for an accepted service.
+2. PayPal processes the payment through an approved integration.
+3. LAPENG's 5% commission is accounted for and collected where supported.
+4. Provider earnings are confirmed through verified settlement records.
+5. Eligible funds become available through the provider's wallet.
+6. The provider requests a withdrawal to an approved payout destination.
+
+This requires appropriate PayPal marketplace/partner capabilities,
+verified seller onboarding, persistent financial records,
+reconciliation, refund and dispute controls, and applicable
+regulatory compliance.
+
+### Financial Security
+
+LAPENG's payment foundation includes authenticated,
+provider-scoped financial endpoints and server-side checks
+for recorded service-payment status.
+
+The wallet does not accept client-supplied balances as proof
+of funds. A payment capture is not treated as a funded wallet
+deposit.
+
+The current Render Free deployment uses temporary storage and
+is not intended to hold real-money wallet balances.
+
+This is a hackathon Sandbox implementation, not a regulated
+stored-value or live payout service.
