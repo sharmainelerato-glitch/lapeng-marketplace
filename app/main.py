@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 load_dotenv(ROOT / '.env')
 DB = Path(os.getenv('LAPENG_DB', str(ROOT/'lapeng.sqlite3')))
 if not DB.is_absolute(): DB = ROOT/DB
-app=FastAPI(title='LAPENG — Human-centred Commerce', version='0.9.2-reduced-demo', docs_url=None, redoc_url=None, openapi_url=None)
+app=FastAPI(title='LAPENG â€” Human-centred Commerce', version='0.9.2-reduced-demo', docs_url=None, redoc_url=None, openapi_url=None)
 # Single-process local/demo rate limiting. Use Redis/edge WAF in production/multiple workers.
 _attempts=defaultdict(deque)
 _attempt_lock=threading.Lock()
@@ -156,7 +156,7 @@ def setup():
             ]
             db.executemany('INSERT INTO providers(owner_id,name,category,kind,city,country,remote,bio,skills,price,capacity,rating,reviews,verified,featured) VALUES(NULL,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',demo)
             for provider in db.execute('SELECT * FROM providers WHERE owner_id IS NULL').fetchall():
-                db.execute('INSERT INTO listings(provider_id,title,description,price,kind,stock) VALUES(?,?,?,?,?,?)',(provider['id'],provider['category']+' — example listing',provider['bio'],provider['price'],provider['kind'],provider['capacity']))
+                db.execute('INSERT INTO listings(provider_id,title,description,price,kind,stock) VALUES(?,?,?,?,?,?)',(provider['id'],provider['category']+' â€” example listing',provider['bio'],provider['price'],provider['kind'],provider['capacity']))
         # Update only recognized legacy *fictional* demo labels, retaining their IDs and all user records.
         # This preserves existing SQLite databases rather than forcing a reset.
         legacy_demo_names={
@@ -171,6 +171,9 @@ def setup():
             db.execute('UPDATE providers SET name=?,bio=? WHERE owner_id IS NULL AND name=?',(new,bio,old))
         # Any older, extra demo categories remain in the DB to preserve references,
         # but public discovery presents at most one example for each of six categories.
+        if demo_enabled:
+            from .public_catalogue import seed_public_catalogue
+            seed_public_catalogue(db)
 setup()
 
 class Credentials(BaseModel):

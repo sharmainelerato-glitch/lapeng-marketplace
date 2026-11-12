@@ -1,0 +1,119 @@
+{
+  "format": "lapeng-public-business-catalogue-v1",
+  "note": "Public hackathon DEMO listings only; no account ownership or verification.",
+  "businesses": [
+    {
+      "name": "Lapeng",
+      "category": "clothing",
+      "kind": "Products",
+      "city": "Morokweng",
+      "country": "South Africa",
+      "remote": 1,
+      "bio": "i sell beautiful  high quality clothes",
+      "skills": "fashion, design",
+      "price": 10,
+      "capacity": 7,
+      "website": "",
+      "service_radius_km": 25,
+      "listings": [
+        {
+          "title": "Burgundy Satin Cowl-Neck Midi Dress",
+          "description": "An elegant burgundy satin midi dress featuring a softly draped cowl neckline, delicate spaghetti straps and a flattering fitted waist. The flowing midi-length skirt makes it a beautiful choice for dinner dates, weddings, parties and special occasions. Style it with heels and a clutch for a timeless evening look.",
+          "price": 49,
+          "kind": "Products",
+          "stock": 20,
+          "catalog_category": "Clothing & Fashion > Women's Clothing > Dresses > Evening Dresses",
+          "specs_json": "{\"Colour\": \"Burgundy\", \"Style\": \"Elegant evening wear\", \"Neckline\": \"Cowl neck\", \"Sleeves\": \"Sleeveless\", \"Straps\": \"Thin spaghetti straps\", \"Length\": \"Midi\", \"Fit\": \"Fitted waist with flowing skirt\", \"Fabric\": \"Satin-look material (illustrative; actual composition unverified)\", \"Care\": \"Follow garment care label\", \"Size guide\": \"Confirm measurements before purchasing\"}",
+          "variants_json": "[{\"name\": \"Size: XS / Colour: Burgundy\", \"options\": {\"Size\": \"XS\", \"Colour\": \"Burgundy\"}, \"price\": 49, \"stock\": 3, \"sku\": \"DRESS-BURG-XS\"}, {\"name\": \"Size: S / Colour: Burgundy\", \"options\": {\"Size\": \"S\", \"Colour\": \"Burgundy\"}, \"price\": 49, \"stock\": 5, \"sku\": \"DRESS-BURG-S\"}, {\"name\": \"Size: M / Colour: Burgundy\", \"options\": {\"Size\": \"M\", \"Colour\": \"Burgundy\"}, \"price\": 49, \"stock\": 5, \"sku\": \"DRESS-BURG-M\"}, {\"name\": \"Size: L / Colour: Burgundy\", \"options\": {\"Size\": \"L\", \"Colour\": \"Burgundy\"}, \"price\": 49, \"stock\": 4, \"sku\": \"DRESS-BURG-L\"}, {\"name\": \"Size: XL / Colour: Burgundy\", \"options\": {\"Size\": \"XL\", \"Colour\": \"Burgundy\"}, \"price\": 49, \"stock\": 3, \"sku\": \"DRESS-BURG-XL\"}]",
+          "packages_json": "[]",
+          "fulfilment_json": "{\"Fulfilment\": \"Physical product\", \"Processing time\": \"1–3 business days (demo estimate)\", \"Delivery\": \"Subject to seller's configured delivery areas\", \"Collection\": \"Only if offered by the seller\", \"Returns\": \"Subject to the published return policy and applicable consumer law\", \"Exchange\": \"Eligible size exchanges subject to available stock\", \"Note\": \"Demo product; no real goods will be shipped\"}",
+          "currency": "USD"
+        },
+        {
+          "title": "Everyday Blush Sneakers",
+          "description": "Elevate your everyday style with these white sneakers featuring subtle blush-pink accents. Designed for a clean, versatile look that pairs beautifully with denim, dresses and casual outfits.",
+          "price": 39,
+          "kind": "Products",
+          "stock": 25,
+          "catalog_category": "Clothing & Fashion > Shoes > Women's Sneakers",
+          "specs_json": "{\"Colour\": \"White and blush pink\", \"Style\": \"Casual sneakers\", \"Closure\": \"Lace-up\", \"Occasion\": \"Everyday casual wear\", \"Material\": \"Confirm actual upper and sole composition\", \"Care\": \"Follow product care instructions\"}",
+          "variants_json": "[{\"name\": \"Size: 3 / Colour: White/Blush\", \"options\": {\"Size\": \"3\", \"Colour\": \"White/Blush\"}, \"price\": 39, \"stock\": 4, \"sku\": \"SNK-WB-03\"}, {\"name\": \"Size: 4 / Colour: White/Blush\", \"options\": {\"Size\": \"4\", \"Colour\": \"White/Blush\"}, \"price\": 39, \"stock\": 5, \"sku\": \"SNK-WB-04\"}, {\"name\": \"Size: 5 / Colour: White/Blush\", \"options\": {\"Size\": \"5\", \"Colour\": \"White/Blush\"}, \"price\": 39, \"stock\": 6, \"sku\": \"SNK-WB-05\"}, {\"name\": \"Size: 6 / Colour: White/Blush\", \"options\": {\"Size\": \"6\", \"Colour\": \"White/Blush\"}, \"price\": 39, \"stock\": 5, \"sku\": \"SNK-WB-06\"}, {\"name\": \"Size: 7 / Colour: White/Blush\", \"options\": {\"Size\": \"7\", \"Colour\": \"White/Blush\"}, \"price\": 39, \"stock\": 3, \"sku\": \"SNK-WB-07\"}, {\"name\": \"Size: 8 / Colour: White/Blush\", \"options\": {\"Size\": \"8\", \"Colour\": \"White/Blush\"}, \"price\": 39, \"stock\": 2, \"sku\": \"SNK-WB-08\"}]",
+          "packages_json": "[]",
+          "fulfilment_json": "{}",
+          "currency": "USD"
+        },
+        {
+          "title": "Burgundy Quilted Shoulder Bag",
+          "description": "Complete your outfit with this elegant burgundy quilted shoulder bag. Its structured shape, gold-tone detailing and timeless design make it a stylish companion for casual outings and special occasions.",
+          "price": 32,
+          "kind": "Products",
+          "stock": 12,
+          "catalog_category": "Clothing & Fashion > Accessories > Handbags",
+          "specs_json": "{\"Colour\": \"Burgundy\", \"Style\": \"Quilted shoulder bag\", \"Hardware appearance\": \"Gold-tone\", \"Finish\": \"Quilted texture\", \"Material\": \"Confirm actual material\", \"Dimensions\": \"Add actual measurements before selling\", \"Care\": \"Wipe gently according to material instructions\"}",
+          "variants_json": "[{\"name\": \"Colour: Burgundy\", \"options\": {\"Colour\": \"Burgundy\"}, \"price\": 32, \"stock\": 12, \"sku\": \"BAG-BURG-01\"}]",
+          "packages_json": "[]",
+          "fulfilment_json": "{}",
+          "currency": "USD"
+        }
+      ]
+    },
+    {
+      "name": "Crown & Co. Hair Studio",
+      "category": "Beauty & personal care",
+      "kind": "Services",
+      "city": "Morokweng",
+      "country": "South Africa",
+      "remote": 0,
+      "bio": "Crown & Co. Hair Studio is a modern hair and beauty studio specialising in protective hairstyles, braiding, wig installations, silk presses and natural hair treatments. We focus on neat styling, personalised consultations and a comfortable experience for every client. Appointments are available for a range of hair types and styling preferences.",
+      "skills": "Knotless braids, box braids, cornrows, wig installation, silk press, natural hair care, deep conditioning, protective hairstyles",
+      "price": 18,
+      "capacity": 1,
+      "website": "",
+      "service_radius_km": 25,
+      "listings": [
+        {
+          "title": "Beauty & personal care by Crown & Co. Hair Studio",
+          "description": "Crown & Co. Hair Studio is a modern hair and beauty studio specialising in protective hairstyles, braiding, wig installations, silk presses and natural hair treatments. We focus on neat styling, personalised consultations and a comfortable experience for every client. Appointments are available for a range of hair types and styling preferences.",
+          "price": 18,
+          "kind": "Services",
+          "stock": 1,
+          "catalog_category": "",
+          "specs_json": "{}",
+          "variants_json": "[]",
+          "packages_json": "[]",
+          "fulfilment_json": "{}",
+          "currency": "USD"
+        }
+      ]
+    },
+    {
+      "name": "Nexa Digital Studio",
+      "category": "Digital & Freelance / Technology Services",
+      "kind": "Digital services",
+      "city": "Morokweng",
+      "country": "South Africa",
+      "remote": 1,
+      "bio": "Nexa Digital Studio is a creative digital services studio helping entrepreneurs, startups and small businesses build professional online experiences. We specialise in responsive websites, e-commerce storefronts, web applications and user-friendly digital interfaces. From planning and design to development and handover, we help clients transform their ideas into practical digital solutions.",
+      "skills": "Web development, UI/UX design, responsive design, HTML, CSS, JavaScript, React, Python, FastAPI, e-commerce development, website maintenance, API integration, prototyping",
+      "price": 65,
+      "capacity": 3,
+      "website": "",
+      "service_radius_km": 25,
+      "listings": [
+        {
+          "title": "Digital & Freelance / Technology Services by Nexa Digital Studio",
+          "description": "Nexa Digital Studio is a creative digital services studio helping entrepreneurs, startups and small businesses build professional online experiences. We specialise in responsive websites, e-commerce storefronts, web applications and user-friendly digital interfaces. From planning and design to development and handover, we help clients transform their ideas into practical digital solutions.",
+          "price": 65,
+          "kind": "Digital services",
+          "stock": 3,
+          "catalog_category": "",
+          "specs_json": "{}",
+          "variants_json": "[]",
+          "packages_json": "[]",
+          "fulfilment_json": "{}",
+          "currency": "USD"
+        }
+      ]
+    }
+  ]
+}
